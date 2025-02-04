@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link rel="stylesheet" href="../assets/css/itemDetail.css">
+</head>
+<body>
+    <header>Item Details</header>
+    <div class="item-details-container">
+        <div class="item-images">
+            <img id="main-image" src="https://via.placeholder.com/400" alt="Main Item Image">
+            <div class="thumbnail-images">
+                <img src="https://via.placeholder.com/100" alt="Thumbnail 1">
+                <img src="https://via.placeholder.com/100" alt="Thumbnail 2">
+                <img src="https://via.placeholder.com/100" alt="Thumbnail 3">
+            </div>
+        </div>
+        <div class="item-info">
+            <h2 id="item-name">Item Name</h2>
+            <p id="item-desc">Item description goes here.</p>
+            <p id="item-price">Price: $XX.XX</p>
+            <p id="item-date">Acquired on: YYYY-MM-DD</p>
+            <button class="interested-btn">I'm Interested</button>
+        </div>
+    </div>
+    
+    <section class="contact-form">
+        <h2>Contact Me About This Item</h2>
+        <form action="mailto:your@email.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="item" id="item-hidden">
+            <input type="submit" value="Send Email">
+        </form>
+    </section>
+</body>
+</html>

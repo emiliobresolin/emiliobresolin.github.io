@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Store</title>
+    <link rel="stylesheet" href="../assets/css/storeStyle.css">
+</head>
+<body>
+    <header>
+        <h1>My Store</h1>
+    </header>
+
+    <main>
+        <section class="items-container">
+            <h2>Available Items</h2>
+            <div class="items-grid">
+                <div class="item">
+                    <a href="item_details.html?id=itemA">
+                        <img src="https://via.placeholder.com/150" alt="Item A">
+                    </a>
+                    <h3 class="item-name">Item Name</h3>
+                    <p class="item-desc">Item Description</p>
+                    <p class="item-price">$Price</p>
+                    <p class="item-date">Date Acquired</p>
+                    <button class="interested-btn" onclick="redirectToDetails('itemA')">I'm Interested</button>
+                </div>
+
+                <div class="item">
+                    <a href="item_details.html?id=itemB">
+                        <img src="https://via.placeholder.com/150" alt="Item B">
+                    </a>
+                    <h3 class="item-name">Item Name</h3>
+                    <p class="item-desc">Item Description</p>
+                    <p class="item-price">$Price</p>
+                    <p class="item-date">Date Acquired</p>
+                    <button class="interested-btn" onclick="redirectToDetails('itemB')">I'm Interested</button>
+                </div>
+
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function redirectToDetails(itemId) {
+            window.location.href = `item_details.html?id=${itemId}`;
+        }
+    </script>
+</body>
+</html>
