@@ -23,7 +23,7 @@
                     <p class="item-desc">Item Description</p>
                     <p class="item-price">$Price</p>
                     <p class="item-date">Date Acquired</p>
-                    <button class="interested-btn" onclick="redirectToDetails('itemA')">I'm Interested</button>
+                    <button class="interested-btn" onclick="window.location.href='https://emiliobresolin.github.io/store/itemDetail/index.html'">I'm Interested</button>
                 </div>
 
                 <div class="item">
@@ -34,7 +34,7 @@
                     <p class="item-desc">Item Description</p>
                     <p class="item-price">$Price</p>
                     <p class="item-date">Date Acquired</p>
-                    <button class="interested-btn" onclick="redirectToDetails('itemB')">I'm Interested</button>
+                    <button class="interested-btn" onclick="window.location.href='https://emiliobresolin.github.io/store/itemDetail/index.html'">I'm Interested</button>
                 </div>
 
                 <!-- Add more items as needed -->
@@ -44,10 +44,5 @@
     <a href="../index.html">
         <button class="back-btn">Back</button>
     </a>
-    <script>
-        function redirectToDetails(itemId) {
-            window.location.href = `itemDetail/item_details.html?id=${itemId}`;
-        }
-    </script>
 </body>
 </html>
