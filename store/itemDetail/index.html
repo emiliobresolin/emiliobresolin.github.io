@@ -28,5 +28,30 @@
     <a href="../index.html">
         <button class="back-btn">Back</button>
     </a>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = urlParams.get('id');
+
+        async function fetchItemDetails() {
+            try {
+                const response = await fetch(`http://localhost:3000/api?id=${itemId}`);
+                const data = await response.json();
+
+                if (data.ok) {
+                    const item = data.item;
+                    document.getElementById('main-image').src = item.image;
+                    document.getElementById('item-name').textContent = item.name;
+                    document.getElementById('item-desc').textContent = item.description;
+                    document.getElementById('item-price').textContent = `Price: ${item.price}`;
+                    document.getElementById('item-date').textContent = `Acquired on: ${item.date}`;
+                }
+            } catch (error) {
+                console.error('Error fetching item details:', error);
+            }
+        }
+
+        fetchItemDetails();
+    </script>
 </body>
 </html>
