@@ -3,45 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Store</title>
+    <title>Redirect Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h1>Welcome to My Store</h1>
-        <p>Browse our collection and contact us if you're interested.</p>
-    </section>
-
-    <section>
-        <h2>Available Items</h2>
-        <div>
-            <div>
-                <img src="https://via.placeholder.com/100" alt="Item A">
-                <h3>itemName</h3>
-                <p>itemDesc</p>
-                <p>itemPrice</p>
-                <p>dateAcc</p>
-                <button>I'm Interested</button>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/100" alt="Item B">
-                <h3>itemName</h3>
-                <p>itemDesc</p>
-                <p>itemPrice</p>
-                <p>dateAcc</p>
-                <button>I'm Interested</button>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Contact Me</h2>
-        <p>Interested in an item? Fill out the form below.</p>
-        <form action="mailto:your@email.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required><br><br>
-            <input type="email" name="email" placeholder="Your Email" required><br><br>
-            <textarea name="message" placeholder="Your Message" required></textarea><br><br>
-            <input type="submit" value="Send Email">
-        </form>
-    </section>
+    <h1>Welcome</h1>
+    <p>Choose where you want to go:</p>
+    <button onclick="window.location.href='https://emiliobresolin.github.io/store'">Go to Store</button>
+    <button onclick="window.location.href='https://emiliobresolin.github.io/portifolio'">Go to Portfolio</button>
 </body>
 </html>
