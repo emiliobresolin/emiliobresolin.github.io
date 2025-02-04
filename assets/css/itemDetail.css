@@ -193,20 +193,23 @@ input[type="submit"]:hover {
 
 /* Specific class for the Back button */
 .back-btn {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove default border */
-    color: white; /* White text color */
-    padding: 10px 20px; /* Padding around the text */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Align button inline */
-    font-size: 16px; /* Text size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top */
 }
 
-/* Style for the button on hover */
 .back-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
