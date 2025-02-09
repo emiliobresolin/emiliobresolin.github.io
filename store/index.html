@@ -1,3 +1,4 @@
+<!-- store.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,42 +16,11 @@
         <section class="items-container">
             <h2>Available Items</h2>
             <div class="items-grid" id="items-grid">
-                <!-- Items will be dynamically loaded here -->
+                <!-- Items will be manually added here -->
             </div>
         </section>
     </main>
 
-    <script>
-        const itemsGrid = document.getElementById('items-grid');
-
-        async function fetchItems() {
-            try {
-                const response = await fetch('http://localhost:3000/api');
-                const data = await response.json();
-
-                if (data.ok) {
-                    data.items.forEach(item => {
-                        const itemElement = document.createElement('div');
-                        itemElement.classList.add('item');
-                        itemElement.innerHTML = `
-                            <a href="item_details.html?id=${item.id}">
-                                <img src="${item.image}" alt="${item.name}">
-                            </a>
-                            <h3 class="item-name">${item.name}</h3>
-                            <p class="item-desc">${item.description}</p>
-                            <p class="item-price">${item.price}</p>
-                            <p class="item-date">${item.date}</p>
-                            <button class="interested-btn" onclick="window.location.href='item_details.html?id=${item.id}'">I'm Interested</button>
-                        `;
-                        itemsGrid.appendChild(itemElement);
-                    });
-                }
-            } catch (error) {
-                console.error('Error fetching items:', error);
-            }
-        }
-
-        fetchItems();
-    </script>
+    <script src="../assets/js/store.js"></script>
 </body>
 </html>

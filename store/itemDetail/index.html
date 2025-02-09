@@ -1,3 +1,4 @@
+<!-- itemDetail.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +12,8 @@
     <div class="item-details-container">
         <div class="item-images">
             <img id="main-image" src="https://via.placeholder.com/400" alt="Main Item Image">
-            <div class="thumbnail-images">
-                <img src="https://via.placeholder.com/100" alt="Thumbnail 1">
-                <img src="https://via.placeholder.com/100" alt="Thumbnail 2">
-                <img src="https://via.placeholder.com/100" alt="Thumbnail 3">
+            <div class="thumbnail-images" id="thumbnail-container">
+                <!-- Thumbnails will be added dynamically -->
             </div>
         </div>
         <div class="item-info">
@@ -25,33 +24,10 @@
             <button class="interested-btn">Buy this item</button>
         </div>
     </div>
-    <a href="../index.html">
+    <a href="store.html">
         <button class="back-btn">Back</button>
     </a>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const itemId = urlParams.get('id');
-
-        async function fetchItemDetails() {
-            try {
-                const response = await fetch(`http://localhost:3000/api?id=${itemId}`);
-                const data = await response.json();
-
-                if (data.ok) {
-                    const item = data.item;
-                    document.getElementById('main-image').src = item.image;
-                    document.getElementById('item-name').textContent = item.name;
-                    document.getElementById('item-desc').textContent = item.description;
-                    document.getElementById('item-price').textContent = `Price: ${item.price}`;
-                    document.getElementById('item-date').textContent = `Acquired on: ${item.date}`;
-                }
-            } catch (error) {
-                console.error('Error fetching item details:', error);
-            }
-        }
-
-        fetchItemDetails();
-    </script>
+    <script src="../../assets/js/itemDetail.js"></script>
 </body>
 </html>
