@@ -1,25 +1,7 @@
-// assets/js/items.js
-const items = [
-    {
-        id: 1,
-        name: "PlayStation 3",
-        description: "A classic gaming console.",
-        price: "$150",
-        date: "2020-01-15",
-        image: "../assets/img/ps3games.png"
-    },
-    {
-        id: 2,
-        name: "PlayStation 3 Controller",
-        description: "Wireless controller for PS3.",
-        price: "$40",
-        date: "2021-05-12",
-        image: "../assets/img/play3controller.png"
-    }
-];
-
-// assets/js/store.js
 const itemsGrid = document.getElementById('items-grid');
+
+// Recupera os itens do localStorage
+const items = JSON.parse(localStorage.getItem('items'));
 
 items.forEach(item => {
     const itemElement = document.createElement('div');
