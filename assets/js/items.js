@@ -1,12 +1,11 @@
-// assets/js/items.js
 const items = [
     {
         id: 1,
-        name: "PlayStation 3 Games",
-        description: "A bunch of classic games.",
+        name: "PlayStation 3",
+        description: "A classic gaming console.",
         price: "$150",
         date: "2012-01-15",
-        image: "../assets/img/ps3games.png"
+        image: "../assets/img/ps3games.png" // Caminho correto em relação a store/index.html
     },
     {
         id: 2,

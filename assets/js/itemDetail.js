@@ -7,7 +7,8 @@ const selectedItem = items.find(item => item.id === itemId);
 
 // Atualize o conteúdo da página com os detalhes do item
 if (selectedItem) {
-    document.getElementById('main-image').src = selectedItem.image;
+    // Corrige o caminho da imagem para itemDetail
+    document.getElementById('main-image').src = selectedItem.image.replace('../', '../../');  // Caminho ajustado para voltar dois níveis
     document.getElementById('item-name').textContent = selectedItem.name;
     document.getElementById('item-desc').textContent = selectedItem.description;
     document.getElementById('item-price').textContent = `Price: ${selectedItem.price}`;

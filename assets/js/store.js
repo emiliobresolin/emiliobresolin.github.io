@@ -5,9 +5,13 @@ const itemsGrid = document.getElementById('items-grid');
 items.forEach(item => {
     const itemElement = document.createElement('div');
     itemElement.classList.add('item');
+
+    // Ajuste o caminho das imagens
+    const imagePath = item.image;  // A imagem já deve ter o caminho correto
+
     itemElement.innerHTML = `
         <a href="itemDetail/index.html?id=${item.id}">
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${imagePath}" alt="${item.name}">
         </a>
         <h3 class="item-name">${item.name}</h3>
         <p class="item-desc">${item.description}</p>
