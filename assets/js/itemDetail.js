@@ -13,6 +13,9 @@ if (selectedItem) {
     document.getElementById('item-desc').textContent = selectedItem.description;
     document.getElementById('item-price').textContent = `Price: ${selectedItem.price}`;
     document.getElementById('item-date').textContent = `Acquired on: ${selectedItem.date}`;
+    document.getElementById('item-full-desc').textContent = selectedItem.fullDescription;  // A chave fullDescription deve estar no seu array de itens
 } else {
     console.log("Item não encontrado.");
 }
+
+
