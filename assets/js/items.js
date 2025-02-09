@@ -1,11 +1,12 @@
+// assets/js/items.js
 const items = [
     {
         id: 1,
-        name: "PlayStation 3",
-        description: "A classic gaming console.",
+        name: "PlayStation 3 Games",
+        description: "A bunch of classic games.",
         price: "$150",
         date: "2012-01-15",
-        image: "../assets/img/play3.png"
+        image: "../assets/img/ps3games.png"
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ const items = [
         image: "../assets/img/play3controller.png"
     }
 ];
+
 
 // Salvar os itens no localStorage para uso nas outras páginas
 localStorage.setItem('items', JSON.stringify(items));
